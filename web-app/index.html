@@ -31,23 +31,23 @@
           <figcaption class="figure-caption">Image taken from <a href="https://en.wikipedia.org/wiki/Ethereum">Wikipedia</a>.</figcaption>
         </figure>
         
-        <p>Max betting amount: <span id="max_amount">50 ether</span></p>
+        <p>Max betting amount: <span id="max_amount">50 wei</span></p>
 
         <h2>Start betting</h2>
         <form>
           <div class="row">
             <div class="col">
-              <input type="number" class="form-control" id="age_input" placeholder="Amount you want to bet">
+              <input type="number" class="form-control" id="bet_value" placeholder="Amount you want to bet">
             </div>
             <div class="col">
-              ether
+              wei
             </div>
           </div>
         </form>
 
         <button type="button" id="start_betting" class="btn btn-primary">Start betting</button>
 
-        <p>Betting result: you <span id="betting_result">won</span></p>
+        <p>Betting result: you <span id="betting_result">did not played yet</span>.</p>
       </div>
     </div>
 
@@ -59,7 +59,7 @@
             <input type="number" class="form-control" id="add_funds_value" placeholder="Add funds">
           </div>
           <div class="col">
-            ether
+            wei
           </div>
         </div>
       </form>

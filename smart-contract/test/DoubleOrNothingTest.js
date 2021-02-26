@@ -45,6 +45,12 @@ contract("DoubleOrNothing", async function(accounts) {
     assert(Number(betLimit) > 0)
   })
 
+  it("cannot bet on more than the maximum amount", async function() {
+    let betLimit = await instance.getBettingLimit({from: accounts[0]})
+
+    await truffleAssert.fails(instance.bet({from: accounts[0], value: 2 * Number(betLimit)}))
+  })
+
   it("play the bet, and balances should be updated accodingly", async function() {
     let beforeSmartContractFunds = await instance.getBettingLimit({from: accounts[0]})
     let beforePlayerFunds = await web3.eth.getBalance(accounts[0])

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Double or Nothing</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./web3.min.js"></script>
+    <script type="text/javascript" src="./abi.js"></script>
+    <script type="text/javascript" src="./main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-4">Double or Nothing</h1>
+        <p class="lead">Feel lucky today? Enter an ammount of DAI, then flip a coin!</p>
+        <p class="lead">Depending on how planets align, you can either double your amount, either loose it.</p>
+        <p class="lead">Either outcome has a 50% chance probability.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div>
+        <figure class="figure">
+          <img src="220px-Ethereum-icon-purple.svg.png">
+          <figcaption class="figure-caption">Image taken from <a href="https://en.wikipedia.org/wiki/Ethereum">Wikipedia</a>.</figcaption>
+        </figure>
+        
+        <p>Max betting amount: <span id="max_amount">50 wei</span></p>
+
+        <h2>Start betting</h2>
+        <form>
+          <div class="row">
+            <div class="col">
+              <input type="number" class="form-control" id="bet_value" placeholder="Amount you want to bet">
+            </div>
+            <div class="col">
+              wei
+            </div>
+          </div>
+        </form>
+
+        <button type="button" id="start_betting" class="btn btn-primary">Start betting</button>
+
+        <button type="button" id="get_betting_state" class="btn btn-primary">Get betting state</button>
+
+        <p>Betting result: <span id="betting_result">you did not played yet</span>.</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <h2>Administrative area</h2>
+      <form>
+        <div class="row">
+          <div class="col">
+            <input type="number" class="form-control" id="add_funds_value" placeholder="Add funds">
+          </div>
+          <div class="col">
+            wei
+          </div>
+        </div>
+      </form>
+
+      <button type="button" id="add_funds" class="btn btn-primary">Add funds</button>
+      <button type="button" id="withdraw_funds" class="btn btn-primary">Withdraw funds</button>
+    </div>
+  </body>
+</html>
